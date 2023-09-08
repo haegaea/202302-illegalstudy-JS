@@ -1,2 +1,2 @@
 # 202302-illegalstudy-JS
-wa!
+# 만두
