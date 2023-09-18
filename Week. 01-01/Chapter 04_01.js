@@ -1,7 +1,7 @@
 // 각각의 console.log의 출력 값을 알아오시오.
 console.log(a);
 var a;
-a= 11;
+a = 11;
 console.log(a);
 
 // 출력값 1. undefined, 2. 11
