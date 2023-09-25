@@ -16,18 +16,23 @@ const rl = readline.createInterface({
 });
 
 // 입력 받기
-function getInput() {
+function getInput()
+{
     rl.question(`홀수를 입력하세요 (1 이상 ~ 9999 이하의 홀수, 종료하려면 'exit'를 입력하세요): `, (input) => {
-        if (input.toLowerCase() === "exit") {
+        if (input.toLowerCase() === "exit")
+        {
             rl.close();
             return;
         }
 
         const num = Number(input);
 
-        if (isNaN(num) || num < 1 || num > 9999 || num % 2 === 0) {
+        if (isNaN(num) || num < 1 || num > 9999 || num % 2 === 0)
+        {
             console.log(`올바른 홀수를 입력하세요 (1 이상 ~ 9999 이하의 홀수).`);
-        } else {
+        }
+        else
+        {
             printReverseDiamond(num.toString()); // 문자열로 변환하여 출력
         }
 
@@ -36,19 +41,22 @@ function getInput() {
 }
 
 // 역마름모 출력 함수
-function printReverseDiamond(height) {
+function printReverseDiamond(height)
+{
     const halfHeight = Math.floor(Number(height) / 2);
     const lines = [];
 
     // 위쪽 반쪽 역마름모 생성
-    for (let i = halfHeight; i >= 0; i--) {
+    for (let i = halfHeight; i >= 0; i--)
+    {
         let row = " ".repeat(halfHeight - i);
         row += "*".repeat(2 * i + 1);
         lines.push(row);
     }
 
     // 아래쪽 반쪽 역마름모 생성
-    for (let i = 1; i <= halfHeight; i++) {
+    for (let i = 1; i <= halfHeight; i++)
+    {
         let row = " ".repeat(halfHeight - i);
         row += "*".repeat(2 * i + 1);
         lines.push(row);
