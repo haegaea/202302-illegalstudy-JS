@@ -5,7 +5,7 @@
 <br>
 
 ```JavaScript
-// 비순수 함수
+// 순수 함수
 var count = 0;
 
 function increase(n) {
@@ -22,7 +22,7 @@ console.log(count);
 <br>
 
 ```JavaScript
-// 순수 함수
+// 비순수 함수
 var count = 0;
 
 function increase() {
